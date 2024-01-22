@@ -1,0 +1,123 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    color: #171a20;
+    font-family: 'M PLUS 1', sans-serif;
+}
+
+.hakkımızda{
+    margin-top: 300px; 
+    margin-left: 100px;
+    margin-right: 50px;
+    font-size: 20px;
+    color: white;
+}
+.ortamenu{
+    display: none;
+}
+
+@media (min-width:1200px){
+    .ortamenu{
+        display: initial;
+    }
+}
+header{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    padding: 5px 20px;
+    position: fixed;
+    top: 0;
+    z-index:2;
+    width: 100%;
+}
+a.logo{
+    margin-left: 10px;
+    margin-top: 10px;
+    height: 20px;
+    width: 125px;
+    color: inherit;
+}
+header a{
+    color: inherit;
+}
+header nav a{
+    text-decoration: none;
+    padding: 5px 10px;
+} 
+header nav a:hover{
+    color: #fff;
+} 
+header nav.ortamenu{
+    margin-top: 5px;
+    text-align: right;
+}
+section{
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+}
+section .icerik{
+    width: 100%;
+    height: 100vh;
+    padding-top: 25vh;
+    padding-bottom: 15vh;
+    padding-right: 100vh;
+    text-align: center;
+    display: grid;
+    grid-template-rows: min-content auto min-content;
+}
+section h1{
+    font-size: 5rem;
+}
+section a{
+    color: inherit;
+}
+section .buton a:first-child{
+    background-color: #444;
+    color: #fff;
+}
+
+section .buton{
+    display: grid;
+    row-gap: 20px;
+    margin: 0 40px;
+}
+
+@media  (min-width:768px){
+    section .buton{
+        max-width: 640px;
+        margin: 0 auto;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+    }
+}
+.arkaplan{
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,.35);
+    backdrop-filter: blur(5px);
+}
+.arkaplan.active{
+    display: block;
+}
+.aracbilgi{
+    width: 100%;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    position:fixed;
+    bottom: 50px;
+    left: 1100px;
+}
+.aracbilgi div{
+    margin: 0 20px;
+}
+.aracbilgi div h2{
+    font-size: 50px;
+    font-weight: 400;
+}
